@@ -113,4 +113,5 @@ Offer original insights, creative suggestions, and possible challenges that fit 
 Explain why these approaches could be effective.
 Include reflective questions or prompts that help the creative explore their ideas deeper.
 Avoid simply restating the inputs. Instead, expand on them thoughtfully and provide actionable advice or inspirationProject
+
 # week-11-assignment2
