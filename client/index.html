@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/style.css" />
+    <script type="module" src="/src/main.js"></script>
+    <title>Week 11 Assignment</title>
+  </head>
+  <body>
+
+    <div class="Hero">
+      <h1>CreativeQuest</h1>
+      <h2>Creative Brief Generator</h2>
+      <p>
+        Welcome to CreativeQuest, your AI-powered creative brief generator.
+        Answer a few questions to get a personalized brief that inspires and
+        guides your creative journey.
+      </p>
+    </div>
+    <h2>Can you fill me in?</h2>
+    <p>Need some help? Find some keywords <a href="./media/CreativeQuest.pdf" target="_blank" rel="noopener">here</a> </p>
+<div class="form-container">
+    <form>
+      <h4>Creative Discipline</h4>
+      <label
+        ></label>What creative discipline(s) are you working
+        in?</label
+      >
+      <input
+        name="prompt1"
+        placeholder="Eg, Graphic Design, Illustration, Photography, etc."
+      />
+      <h4>Project Goals & intentions</h4>
+      <label>
+        Briefly describe what you want to achieve,
+        explore, or develop creatively</label
+      >
+      <input
+        name="prompt2"
+        placeholder="Skill-building, portfolio piece, personal expression,experimentation, storytelling, career growth etc"
+      />
+      <h4>Contextual Interests/ Inspirations</h2>
+      <label>Name any themes, movements, historical periods of theories you want to explore or reference?</label>
+      <input name="prompt3" 
+      placeholder="Modernism, mythology, pop art, urban landscapes, spirituality" />
+
+      <h4>Creative Constraints or Preferences</h4>
+      <label>Adding specifics can help us create a more actionable and motivating brief</label>
+      <input name="prompt4" placeholder="Medium, style, tone, time limits, materials etc" />
+
+      <div class="SubmitButton"><button>Let The Quest Begin</button></div>
+    </form>
+    </div>
+ <h2> Your Quest Awaits</h2>
+    <div id="responses">
+     
+    </div>
+  </body>
+</html>
