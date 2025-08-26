@@ -26,7 +26,7 @@ Include reflective questions or prompts that help the creative explore their ide
 Avoid simply restating the inputs. Instead, expand on them thoughtfully and provide actionable advice or inspiration.`;
 
   console.log(prompt);
-  const response = await fetch("http://localhost:8222/chat", {
+  const response = await fetch("https://week-11-assignment2.onrender.com", {
     //https://week-11-assignment2.onrender.com or http://localhost:8222/chat
     method: "POST",
     headers: {
