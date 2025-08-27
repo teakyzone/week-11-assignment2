@@ -7,6 +7,9 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 dotenv.config();
+
+const PORT = process.env.PORT || 8222;
+
 const ai = new GoogleGenAI({
   apiKey: process.env.GOOGLE_API_KEY,
 });
@@ -35,6 +38,6 @@ app.post("/chat", async function (req, res) {
   }
 });
 
-app.listen(8222, function () {
-  console.log("Server is running on port 8222");
+app.listen(PORT, function () {
+  console.log(`Server is running on port ${PORT}.`);
 });
