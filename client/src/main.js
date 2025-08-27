@@ -16,7 +16,7 @@ async function sendChatRequest(event) {
   Please include any specific constraints or preferences if provided: ${prompt4}.
 
   Summarize the main goals, inspirations, and constraints. 
-Limit the response to under 400 words, focusing only on key points: Project Title, Objectives, Audience, Deliverables, and Timeline.
+Limit the response to under 400 words, focusing only on key points: Project Title, Objectives, Audience, Deliverables, Timeline, Creative Direction & Inspiration, Potential Challenges & How To Overcome and Next Steps.
 Use a clear and encouraging tone. 
 Avoid long explanations or reflective questions
 Analyze the provided project details and goals carefully. 
@@ -49,11 +49,20 @@ Avoid simply restating the inputs. Instead, expand on them thoughtfully and prov
     "Audience",
     "Deliverables",
     "Timeline",
+    "Creative Direction & Inspiration",
+    "Potential Challenges & How To Overcome",
+    "Next Steps",
   ];
   let formattedText = data;
   headings.forEach((heading) => {
-    const regex = new RegExp(`(${heading}):`, "i");
-    formattedText = formattedText.replace(regex, `<h3>$1:</h3>`);
+    const pattern = new RegExp(
+      `\\*{0,2}\\s*${heading.replace(
+        /[.*+?^${}()|[\]\\]/g,
+        "\\$&"
+      )}\\s*(\\([^)]*\\))?\\s*:\\s*\\*{0,2}`,
+      "gi"
+    );
+    formattedText = formattedText.replace(pattern, `<h3>${heading}:</h3>`);
   });
 
   responsesDiv.innerHTML = formattedText;
